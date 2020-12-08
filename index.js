@@ -152,8 +152,38 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+let gameChip = Math.random()
+let computer = ''
+
+let computerChoice = (gameChip)=>{
+  if (gameChip > 0 && gameChip <= 0.33){
+    return computer = "rock"
+  } else if (gameChip > 0.33 && gameChip <= 0.66){
+    return computer = "paper"
+  } else if (gameChip > 0.66 && gameChip >= 1){
+    return computer = "scissors"
+  }
+}
+
+computerChoice()
+console.log(computer)
+
 function game(user, computer){
-    /*add your code here*/
+  if (user === 'scissors' && computer === 'paper'){
+    return "you win!"
+  } else if (user === 'paper' && computer === 'rock'){
+    return "you win!"
+  } else if (user === 'rock' && computer === 'scissors'){
+    return "you win!"
+  } else if (user === 'paper' && computer === 'scissors'){
+    return "you lose!"
+  } else if (user === 'rock' && computer === 'paper'){
+    return "you lose!"
+  } else if (user === 'scissors' && computer === 'rock'){
+    return "you lose!"
+  } else{
+    return "it's a tie"
+  }
 }
   
   
