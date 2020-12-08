@@ -253,10 +253,18 @@ Using the grade function below do the following:
 */
   
 function grade(num){
+  if (num >= 90 && num <= 100){
+    return 'you got an A'
+  } else if (num >= 80 && num<= 89){
+    return 'you got a B'
+  } else if (num >= 70 && num <= 79){
+    return 'you got a C'
+  } else if (num >= 60 && num <= 69){
+  return 'you got a D'
+}else {
+    return 'you got an F'
+  }}
 
-  }
-  
-  console.log('grade function', grade(85));
   
   
 
